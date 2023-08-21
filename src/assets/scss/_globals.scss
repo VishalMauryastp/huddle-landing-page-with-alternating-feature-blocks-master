@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;700&display=swap');
+
+$Pink: hsl(322, 100%, 66%);
+$Very_Pale_Cyan: hsl(193, 100%, 96%);
+$Very_Dark_Cyan: hsl(192, 100%, 9%);
+$Grayish_Blue: hsl(208, 11%, 55%);
+$white: hsl(0, 0%, 100%);
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.2;
+    font-family: 'Roboto', system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Poppins', system-ui, sans-serif;
+}
+
+$Regular: 400;
+$Semi-bold: 600;
+$bold: 700;
+
+$fs-lg: 2.5rem;
+$fs-md: 1rem;
+$fs-sm: 0.9rem;
+
+.d-f {
+    display: flex;
+}
+
+.ai-c {
+    align-items: center;
+}
+
+.jc-c {
+    justify-content: center;
+}
+
+.jc-sb {
+    justify-content: space-between;
+}
+
+.jc-ar {
+    justify-content: space-around;
+}
+
+.fd-c {
+    flex-direction: column;
+}
+
+
+a {
+    text-decoration: none;
+    font-weight: $Semi-bold;
+    transition: opacity 0.2s ease-in-out;
+    font-size: $fs-sm;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.boxShadow {
+    box-shadow: 0 0 30px 1px #00252e3a;
+}
+
+.setWidth {
+    margin: 0 auto;
+    max-width: 85%;
+}
+
+.button {
+    padding: 1rem 5rem;
+    border-radius: 30px;
+    display: block;
+    width: fit-content;
+
+    @include maximum(laptop) {
+        padding: 0.8rem 3rem;
+    }
+
+    @include maximum(mobile) {
+        padding: 0.8rem 2rem;
+    }
+}

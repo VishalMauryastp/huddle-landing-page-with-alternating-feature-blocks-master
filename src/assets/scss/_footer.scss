@@ -1,0 +1,131 @@
+footer {
+    background-color: $Very_Dark_Cyan;
+
+    .setWidth {
+        min-height: 500px;
+        color: $Grayish_Blue;
+        justify-content: flex-end;
+        padding-top: 10rem;
+
+        .icon {
+            color: $white;
+            cursor: pointer;
+            transition: color 0.2s ease-in-out;
+
+            &:hover {
+                color: $Pink;
+            }
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            place-items: center;
+
+            .address {
+                div {
+                    margin-top: 1.5rem;
+                    gap: 1rem;
+                    justify-content: flex-start;
+
+                    svg {
+                        min-width: fit-content;
+                    }
+
+                    p {
+                        max-width: 90%;
+                    }
+                }
+            }
+
+            .links {
+                gap: 3rem;
+                justify-content: flex-start;
+                width: 100%;
+
+                @include maximum(mobile) {
+                    flex-direction: column;
+                    gap: 0;
+                }
+
+                a {
+                    margin-top: 1rem;
+                    display: block;
+                    width: fit-content;
+                    font-size: $fs-md;
+                    font-weight: $Regular;
+                    color: $Grayish_Blue;
+                    transition: color 0.2s ease-in-out;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .social {
+                gap: 0.7rem;
+
+                span {
+                    border: 2px solid $white;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    color: $white;
+                    transition: all 0.3s ease-in-out;
+                    cursor: pointer;
+
+                    &:hover {
+                        border: 2px solid $Pink;
+                        color: $Pink;
+                    }
+
+                    .social_icon {
+                        font-size: 1.5rem;
+                    }
+                }
+
+                @include maximum(laptop) {
+                    grid-column: 1/4;
+                }
+
+                @include maximum(mobile) {
+                    grid-column: auto;
+                }
+            }
+        }
+
+        .right {
+            font-weight: $Regular;
+            font-size: $fs-sm;
+            text-align: right;
+            margin-top: 1rem;
+
+            @include maximum(mobile) {
+                text-align: center;
+            }
+        }
+
+        .attribution {
+            width: fit-content;
+            margin: 0 auto;
+            margin-top: 1rem;
+            padding: 0.7rem 1rem;
+            background-color: $Very_Pale_Cyan;
+            border-radius: 20px 20px 0 0;
+            color: $Pink;
+            text-align: center;
+
+            a {
+                color: $Very_Dark_Cyan;
+                transition: color 0.2s ease-in-out;
+                font-weight: $Regular;
+
+                &:hover {
+                    color: $Pink;
+                }
+            }
+        }
+    }
+}

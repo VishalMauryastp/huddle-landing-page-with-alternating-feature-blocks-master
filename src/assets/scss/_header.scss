@@ -1,0 +1,15 @@
+header {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    top: 2rem;
+
+    img {
+        cursor: pointer;
+        max-width: 100%;
+
+        @include maximum(laptop) {
+            max-width: 50%;
+        }
+    }
+}

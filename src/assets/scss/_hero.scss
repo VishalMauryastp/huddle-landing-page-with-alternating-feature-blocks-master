@@ -1,0 +1,103 @@
+main {
+    position: relative;
+    padding-bottom: 13rem;
+
+    .services {
+        padding: 4rem 0;
+
+        .container {
+            justify-content: flex-end;
+            margin-top: 2.5rem;
+            border-radius: 15px;
+
+            @include maximum(laptop) {
+                justify-content: center;
+            }
+
+            &:nth-child(even) {
+                .service {
+                    flex-direction: row-reverse;
+
+                    @include maximum(laptop) {
+                        flex-direction: column-reverse;
+                    }
+                }
+            }
+
+            .service {
+                max-width: 85%;
+                padding: 3rem 0;
+
+                @include maximum(laptop) {
+                    flex-direction: column-reverse;
+                }
+
+                &__image {
+                    max-width: 40%;
+
+                    img {
+                        max-width: 80%;
+                    }
+
+                    @include maximum(laptop) {
+                        max-width: 100%;
+                    }
+                }
+
+                &__text {
+                    max-width: 50%;
+
+                    @include maximum(laptop) {
+                        max-width: 100%;
+                        margin-top: 2rem;
+                        text-align: center;
+                    }
+
+                    h2 {
+                        font-weight: $Semi-bold;
+                    }
+
+                    p {
+                        font-size: $fs-md;
+                        margin-top: 1rem;
+                        color: $Grayish_Blue;
+                        font-weight: $Regular;
+
+                        @include maximum(mobile) {
+                            font-size: $fs-sm;
+                        }
+                    }
+
+
+                }
+            }
+        }
+    }
+
+    .contact {
+        position: absolute;
+        width: 50%;
+        height: 250px;
+        left: 50%;
+        transform: translate(-50%, 20%);
+        background-color: $white;
+        gap: 2rem;
+        color: $Very_Dark_Cyan;
+        border-radius: 15px;
+        padding: 1rem;
+        z-index: 2;
+
+        @include maximum(laptop) {
+            width: 85%;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+
+            @include maximum(laptop) {
+                font-size: 1rem;
+            }
+        }
+
+    }
+}
